@@ -131,6 +131,11 @@ Promise.all([step0, step1, step2, step3, step4, step5, step6, step7])
     values.forEach(instruction => {
       document.querySelector("#brusselsSprouts").innerHTML += `<li>${instruction}</li>`
     })
+  })
+  .catch(error => {
+    console.error(error)
+  })
+  .finally(() => {
     document.querySelector("#brusselsSprouts").innerHTML += `<li>Brussel sprouts are ready!</li>`
     document.querySelector("#brusselsSproutsImg").removeAttribute("hidden")
   })
